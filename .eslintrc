@@ -1,0 +1,17 @@
+{
+  "root": true,
+  "extends": ["airbnb"],
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "implicit-arrow-linebreak:": ["error", "beside"],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ]
+  }
+}
