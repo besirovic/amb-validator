@@ -7,11 +7,7 @@
   },
   "rules": {
     "implicit-arrow-linebreak:": ["error", "beside"],
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [".js", ".jsx"]
-      }
-    ]
+    "brace-style": [2, "allman"],
+    "implicit-arrow-linebreak": [2, "as-beside"]
   }
 }
