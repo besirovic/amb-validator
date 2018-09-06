@@ -1,13 +1,8 @@
 {
   "root": true,
-  "extends": ["airbnb"],
+  "extends": ["standard", "standard-jsx"],
   "env": {
     "browser": true,
     "es6": true
-  },
-  "rules": {
-    "implicit-arrow-linebreak:": ["error", "beside"],
-    "brace-style": [2, "allman"],
-    "implicit-arrow-linebreak": [2, "as-beside"]
   }
 }
