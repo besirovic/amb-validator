@@ -57,22 +57,26 @@ export default class App extends React.Component {
   }
 
   getAsset() {
-    this.amb
-      .getAssetById(this.state.assetID)
-      .then(resp => {
-        this.setState({
-          assetValid: true,
-          showDialog: true,
-          showReader: false,
+    const { assetID } = this.state;
+
+    if (assetID) {
+      this.amb
+        .getAssetById(this.state.assetID)
+        .then(resp => {
+          this.setState({
+            assetValid: true,
+            showDialog: true,
+            showReader: false,
+          });
+        })
+        .catch(err => {
+          this.setState({
+            assetValid: false,
+            showDialog: true,
+            showReader: false,
+          });
         });
-      })
-      .catch(err => {
-        this.setState({
-          assetValid: false,
-          showDialog: true,
-          showReader: false,
-        });
-      });
+    }
   }
 
   dismissDialog() {
