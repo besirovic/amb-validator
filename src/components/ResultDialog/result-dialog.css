@@ -1,0 +1,36 @@
+.mdc-dialog__body {
+  text-align: center;
+  padding-top: 40px !important;
+}
+.mdc-dialog__footer {
+  justify-content: center !important;
+  padding-bottom: 40px !important;
+}
+.result-icon {
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  border: 3px dashed;
+  font-size: 80px;
+  line-height: 140px;
+  vertical-align: middle;
+}
+.result-message {
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+.result-icon__valid {
+  border-color: #018786;
+}
+.result-icon__invalid {
+  border-color: red;
+}
+.result-icon__valid,
+.result-message__valid {
+  color: #018786;
+}
+.result-icon__invalid,
+.result-message__invalid {
+  color: red;
+}

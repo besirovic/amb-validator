@@ -14,7 +14,7 @@
   box-shadow: none;
   border-radius: 4px 0 0 4px;
   border: 1px solid rgba(0, 0, 0, 0.24);
-  padding: 12px 12px 7px;
+  padding: 12px;
 }
 .search__input:hover,
 .search__input:focus {

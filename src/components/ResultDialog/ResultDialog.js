@@ -1,32 +1,35 @@
 import React from 'react';
 
+import './result-dialog.css';
+
 const ResultDialog = props => {
-  const { onDialogClose } = props;
+  const { show, dismissDialog, valid } = props;
 
   return (
     <aside
       id="result-dialog"
-      className={`mdc-dialog ${
-        props.result !== null && props.result !== undefined
-          ? 'mdc-dialog--open'
-          : ''
-      }`}>
+      className={`mdc-dialog ${show === true ? 'mdc-dialog--open' : ''}`}>
       <div className="mdc-dialog__surface">
-        <header className="mdc-dialog__header">
-          <h2 id="my-mdc-dialog-label" className="mdc-dialog__header__title">
-            Result
-          </h2>
-        </header>
-
-        <section id="my-mdc-dialog-description" className="mdc-dialog__body">
-          {props.result}
+        <section className="mdc-dialog__body">
+          <div
+            className={`result-icon result-icon__${
+              valid ? 'valid' : 'invalid'
+            }`}>
+            <i className={`mdi mdi-${valid ? 'check' : 'close'}-outline`} />
+          </div>
+          <h3
+            className={`result-message result-message__${
+              valid ? 'valid' : 'invalid'
+            }`}>
+            Your product is {!valid ? 'not' : ''} valid.
+          </h3>
         </section>
 
         <footer className="mdc-dialog__footer">
           <button
             type="button"
             className="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel"
-            onClick={onDialogClose}>
+            onClick={dismissDialog}>
             Close
           </button>
         </footer>
