@@ -1,0 +1,10 @@
+.start-btn {
+  display: block;
+  height: 80px !important;
+  margin: 40px auto 40px auto;
+  padding: 20px 70px !important;
+  border-radius: 6px !important;
+}
+.start-btn .mdc-fab__icon {
+  margin-right: 30px !important;
+}
